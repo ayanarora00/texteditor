@@ -55,7 +55,7 @@ public class GapBuffer {
                 newArray[i] = this.buffer[i];
             }
 
-            // Variable for econd half's length
+            // Variable for second half's length
             int length_secondhalf = this.buffer.length - this.end;
 
             // Setting new end index

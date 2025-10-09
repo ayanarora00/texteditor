@@ -21,6 +21,13 @@ import com.googlecode.lanterna.terminal.swing.SwingTerminalFrame;
 public class TextEditor {
 
 
+    /** drawBuffer method that draws the buffer/file contents onto the screen
+     * 
+     * @param GapBuffer buf - the gapbuffer object we declare and use to implement the text editor
+     * @param Screen screen - the screen we will initialize on which the contents of the file have to be rendered
+     * @throws IOException
+     */
+    
     public static void drawBuffer(GapBuffer buf, Screen screen) throws IOException {
 
         // Total number of columns that the screen has (the length)
