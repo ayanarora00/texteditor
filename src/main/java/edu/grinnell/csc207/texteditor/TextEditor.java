@@ -107,7 +107,7 @@ public class TextEditor {
 
 
         // Screen screen = new DefaultTerminalFactory().createScreen(); - original code
-        // This piece of code came from Prof. Osera to tackle problems Lanterna creates with Windoes
+        // This piece of code came from Prof. Osera to tackle problems Lanterna creates with Windows
         // It initializes the frame and the screen
         SwingTerminalFrame frame = new DefaultTerminalFactory().createSwingTerminal();
         frame.setTitle("Text Editor");
