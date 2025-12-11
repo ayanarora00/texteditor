@@ -14,13 +14,14 @@ public class GapBuffer {
     private int end;
 
 
-    /** Gapbuffer constructor is used to create a new buffer
+    /** 
+     * Gapbuffer constructor is used to create a new buffer
      * 
      * @param nothing
      * @return doesn't return anythinG
      */
 
-    public GapBuffer(){
+    public GapBuffer() {
 
         // The initial length of the buffer is set to 10
         this.buffer = new char[10];
@@ -32,7 +33,8 @@ public class GapBuffer {
 
     }
 
-    /** Insert is used to add a new character to the buffer
+    /** 
+     * Insert is used to add a new character to the buffer
      * 
      * @param char ch to be inserted into the buffer
      * @return void - doesn't return anything
@@ -51,7 +53,7 @@ public class GapBuffer {
             char[] newArray = Arrays.copyOf(this.buffer, this.buffer.length * 2);    
 
             // Copying the first (before - gap part)
-            for (int i = 0; i < this.start; i++){
+            for (int i = 0; i < this.start; i++) {
                 newArray[i] = this.buffer[i];
             }
 
@@ -62,7 +64,7 @@ public class GapBuffer {
             int end_updated = newArray.length - length_secondhalf;
 
             // Copying over the second half (after gap)
-            for (int i = 0; i < length_secondhalf; i++){
+            for (int i = 0; i < length_secondhalf; i++) {
                 newArray[end_updated + i] = this.buffer[this.end + i];
             }
 
@@ -84,7 +86,8 @@ public class GapBuffer {
 
     }
 
-    /** Delete function deletes the character at the cursor position
+    /** 
+     * Delete function deletes the character at the cursor position
      * 
      * @param doesn't take parameters
      * @return void - doesn't return anything
@@ -94,14 +97,15 @@ public class GapBuffer {
 
         // Checking if the start is at 0 index or not - 0 index would mean not having any characters to delete
 
-        if (this.start > 0){
+        if (this.start > 0) {
             // Decrementing start variable
             this.start--;
         } 
 
     }
 
-    /** Returns the cursor position (start value in this case)
+    /** 
+     * Returns the cursor position (start value in this case)
      * 
      * @param doesn't take parameters
      * @return int - the position/index of the cursor
@@ -111,7 +115,8 @@ public class GapBuffer {
         return this.start;
     }
 
-    /** Moves the cursor (start value in this case to the left)
+    /** 
+     * Moves the cursor (start value in this case to the left)
      * 
      * @param doesn't take parameters
      * @return void - doesn't return anything
@@ -120,7 +125,7 @@ public class GapBuffer {
     public void moveLeft() {
 
         // Checking if the cursor can be moved left 
-        if (this.start > 0){
+        if (this.start > 0) {
 
             // Decrementing start value
             this.start--;
@@ -137,7 +142,8 @@ public class GapBuffer {
 
     }
 
-    /** Moves the cursor (start value in this case to the right)
+    /** 
+     * Moves the cursor (start value in this case to the right)
      * 
      * @param doesn't take parameters
      * @return void - doesn't return anything
@@ -148,7 +154,7 @@ public class GapBuffer {
         // Checking if end variable's value is lesser than the buffer's actual length to confirm we're not standing
         // at the buffer's end (otherwise, we can't move right)
 
-        if (this.end < this.buffer.length){
+        if (this.end < this.buffer.length) {
 
             // Shifting the first element of the second half over to the end of the first half
             this.buffer[start] = buffer[end];
@@ -164,18 +170,20 @@ public class GapBuffer {
 
     }
 
-    /** Returns the size of the text (that is the size of both the halves without the gap)
+    /**
+     * Returns the size of the text (that is the size of both the halves without the gap)
      * 
      * @param doesn't take parameters
      * @return int - the size of the text
      */
 
-    public int getSize(){
+    public int getSize() {
         // the buffer length - the gap length
         return this.buffer.length - (this.end - this.start);
     }
 
-    /** Returns the character at the inputted index
+    /** 
+     * Returns the character at the inputted index
      * 
      * @param int i - the index for which we need to access the character
      * @return char - the character at index i 
@@ -184,7 +192,7 @@ public class GapBuffer {
     public char getChar(int i) {
         
         // If i is less than the start value, we can simply use i as the index for the buffer
-        if (i < this.start){
+        if (i < this.start) {
             return buffer[i];
         } else {
 
@@ -194,7 +202,8 @@ public class GapBuffer {
 
     }
 
-    /** Returns the elements of the buffer as a String
+    /** 
+     * Returns the elements of the buffer as a String
      * 
      * @param doesn't take anything as parameter
      * @return String - the string version of the buffer

@@ -10,13 +10,14 @@ public class SimpleStringBuffer {
     private String str;
     private int cursor;
 
-    /** SimpleStringBuffer constructor is used to create a new buffer
+    /** 
+     * SimpleStringBuffer constructor is used to create a new buffer
      * 
      * @param nothing
      * @return doesn't return anything
      */
 
-    public SimpleStringBuffer(){
+    public SimpleStringBuffer() {
 
         // Initializing the string buffer to empty and cursor to 0 (right at the start)
         this.str = "";
@@ -25,7 +26,8 @@ public class SimpleStringBuffer {
     }
 
 
-    /** Insert is used to add a new character to the buffer
+    /** 
+     * Insert is used to add a new character to the buffer
      * 
      * @param char ch to be inserted into the buffer
      * @return void - doesn't return anything
@@ -41,7 +43,8 @@ public class SimpleStringBuffer {
 
     }
 
-    /** Delete function deletes the character at the cursor position
+    /** 
+     * Delete function deletes the character at the cursor position
      * 
      * @param doesn't take parameters
      * @return void - doesn't return anything
@@ -58,7 +61,8 @@ public class SimpleStringBuffer {
 
     }
 
-    /** Returns the cursor position
+    /** 
+     * Returns the cursor position
      * 
      * @param doesn't take parameters
      * @return int - the position/index of the cursor
@@ -68,7 +72,8 @@ public class SimpleStringBuffer {
         return this.cursor;
     }
 
-    /** Moves the cursor to the left
+    /** 
+     * Moves the cursor to the left
      * 
      * @param doesn't take parameters
      * @return void - doesn't return anything
@@ -77,13 +82,14 @@ public class SimpleStringBuffer {
     public void moveLeft() {
 
         // Checking bounds  - can't move cursor left if it is right at the start
-        if (this.cursor > 0){
+        if (this.cursor > 0) {
             this.cursor--;
         }
 
     }
 
-    /** Moves the cursor to the right
+    /** 
+     * Moves the cursor to the right
      * 
      * @param doesn't take parameters
      * @return void - doesn't return anything
@@ -92,13 +98,14 @@ public class SimpleStringBuffer {
     public void moveRight() {
 
         // Checking bounds  - can't move cursor right if it is already at the last element
-        if (this.cursor < str.length()){
+        if (this.cursor < str.length()) {
             this.cursor++;
         }
         
     }
 
-    /** Returns the size of the string
+    /** 
+     * Returns the size of the string
      * 
      * @param doesn't take parameters
      * @return int - the size of the text string
@@ -108,7 +115,8 @@ public class SimpleStringBuffer {
         return this.str.length();
     }
 
-    /** Returns the character at the inputted index
+    /** 
+     * Returns the character at the inputted index
      * 
      * @param int i - the index for which we need to access the character
      * @return char - the character at index i 
@@ -118,7 +126,7 @@ public class SimpleStringBuffer {
     public char getChar(int i) throws IndexOutOfBoundsException {
         
         // Checking if i is valid
-        if (i < 0 || i > this.str.length()){
+        if (i < 0 || i > this.str.length()) {
             throw new IndexOutOfBoundsException("Invalid index");
         }
 
@@ -126,7 +134,8 @@ public class SimpleStringBuffer {
         return this.str.charAt(i);
     }
 
-    /** Returns the String/text buffer
+    /** 
+     * Returns the String/text buffer
      * 
      * @param doesn't take anything as parameter
      * @return String - the string buffer which has all the text

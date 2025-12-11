@@ -26,6 +26,7 @@
 
 ## Changelog
 
++ Implemented the stylistic changes requested
 + Implemented all the functions in SimpleStringBuffer and GapBuffer as instructed.
 + Implemented the unit test suites for SimpleStringBuffer and GapBuffer classes and verified they work
 + Implemented drawBuffer and main methods in TextEditor.java

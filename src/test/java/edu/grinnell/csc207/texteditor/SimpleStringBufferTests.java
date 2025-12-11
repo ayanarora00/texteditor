@@ -10,7 +10,7 @@ public class SimpleStringBufferTests {
     private SimpleStringBuffer buffer = new SimpleStringBuffer();
 
     @Test
-    public void insertAndToString_test(){
+    public void insertAndToString_test() {
         buffer.insert('H');
         buffer.insert('e');
         buffer.insert('y');
@@ -18,7 +18,7 @@ public class SimpleStringBufferTests {
     }
 
     @Test
-    public void delete_test(){
+    public void delete_test() {
         buffer.insert('H');
         buffer.insert('e');
         buffer.insert('y');
@@ -29,7 +29,7 @@ public class SimpleStringBufferTests {
     }
 
     @Test
-    public void moveLeft_moveright_getcursorpos(){
+    public void moveLeft_moveright_getcursorpos() {
         buffer.insert('H');
         buffer.insert('e');
         buffer.insert('y');
@@ -41,7 +41,7 @@ public class SimpleStringBufferTests {
     }
 
     @Test
-    public void getchar_test(){
+    public void getchar_test() {
         buffer.insert('H');
         buffer.insert('e');
         buffer.insert('y');
@@ -49,7 +49,7 @@ public class SimpleStringBufferTests {
     }
 
     @Test
-    public void getsize_test(){
+    public void getsize_test() {
         buffer.insert('H');
         buffer.insert('e');
         buffer.insert('y');
@@ -64,7 +64,7 @@ public class SimpleStringBufferTests {
                 
 
                 // Inserting everything from the String into the buffer
-                for (int i = 0; i < s.length(); i++){
+                for (int i = 0; i < s.length(); i++) {
                     buffer.insert(s.charAt(i));
                 }
 
@@ -72,7 +72,7 @@ public class SimpleStringBufferTests {
                 String string = buffer.toString();
 
                 // Moving the cursor left and right 
-                for (int i = 0; i < move; i++){
+                for (int i = 0; i < move; i++) {
 
                     if (i % 4 == 0){
                         buffer.moveLeft();

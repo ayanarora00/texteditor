@@ -21,7 +21,8 @@ import com.googlecode.lanterna.terminal.swing.SwingTerminalFrame;
 public class TextEditor {
 
 
-    /** drawBuffer method that draws the buffer/file contents onto the screen
+    /** 
+     * drawBuffer method that draws the buffer/file contents onto the screen
      * 
      * @param GapBuffer buf - the gapbuffer object we declare and use to implement the text editor
      * @param Screen screen - the screen we will initialize on which the contents of the file have to be rendered
@@ -38,10 +39,10 @@ public class TextEditor {
 
         //  Rendering the content to the screen. We traverse the buffer and adds the characters to 
         // the screen
-        for (int i = 0; i <  buf.getSize(); i++){
+        for (int i = 0; i <  buf.getSize(); i++) {
 
             // We make sure i is in the bounds of the screen's length
-            if (i < cols){
+            if (i < cols) {
 
                 // Assigning the buffer character to a TextCharacter
                 char ch = buf.getChar(i);
@@ -88,7 +89,7 @@ public class TextEditor {
         GapBuffer buf = new GapBuffer();
 
         // Checking validity of path and path location
-        if (Files.exists(path) && Files.isRegularFile(path)){
+        if (Files.exists(path) && Files.isRegularFile(path)) {
             
             System.out.format("Loading %s...\n", input);
 
@@ -99,7 +100,7 @@ public class TextEditor {
             char[] arr = file.toCharArray();
 
             // Inserting elements from character array into the buffer
-            for (int i = 0; i < arr.length; i++){
+            for (int i = 0; i < arr.length; i++) {
                 buf.insert(arr[i]);
             }
 
