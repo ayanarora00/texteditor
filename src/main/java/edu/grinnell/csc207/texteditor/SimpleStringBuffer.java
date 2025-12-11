@@ -12,9 +12,6 @@ public class SimpleStringBuffer {
 
     /** 
      * SimpleStringBuffer constructor is used to create a new buffer
-     * 
-     * @param nothing
-     * @return doesn't return anything
      */
 
     public SimpleStringBuffer() {
@@ -28,9 +25,7 @@ public class SimpleStringBuffer {
 
     /** 
      * Insert is used to add a new character to the buffer
-     * 
-     * @param char ch to be inserted into the buffer
-     * @return void - doesn't return anything
+     * @param ch to be inserted into the buffer
      */
 
     public void insert(char ch) {
@@ -45,9 +40,6 @@ public class SimpleStringBuffer {
 
     /** 
      * Delete function deletes the character at the cursor position
-     * 
-     * @param doesn't take parameters
-     * @return void - doesn't return anything
      */
 
     public void delete() {
@@ -63,9 +55,7 @@ public class SimpleStringBuffer {
 
     /** 
      * Returns the cursor position
-     * 
-     * @param doesn't take parameters
-     * @return int - the position/index of the cursor
+     * @return the position/index of the cursor
      */
 
     public int getCursorPosition() {
@@ -74,9 +64,6 @@ public class SimpleStringBuffer {
 
     /** 
      * Moves the cursor to the left
-     * 
-     * @param doesn't take parameters
-     * @return void - doesn't return anything
      */
 
     public void moveLeft() {
@@ -90,9 +77,6 @@ public class SimpleStringBuffer {
 
     /** 
      * Moves the cursor to the right
-     * 
-     * @param doesn't take parameters
-     * @return void - doesn't return anything
      */
 
     public void moveRight() {
@@ -106,9 +90,7 @@ public class SimpleStringBuffer {
 
     /** 
      * Returns the size of the string
-     * 
-     * @param doesn't take parameters
-     * @return int - the size of the text string
+     * @return the size of the text string
      */
 
     public int getSize() {
@@ -118,8 +100,8 @@ public class SimpleStringBuffer {
     /** 
      * Returns the character at the inputted index
      * 
-     * @param int i - the index for which we need to access the character
-     * @return char - the character at index i 
+     * @param i the index for which we need to access the character
+     * @return char at index i 
      * @throws IndexOutOfBoundsException
      */
 
@@ -136,9 +118,7 @@ public class SimpleStringBuffer {
 
     /** 
      * Returns the String/text buffer
-     * 
-     * @param doesn't take anything as parameter
-     * @return String - the string buffer which has all the text
+     * @return the string buffer which has all the text
      */
 
     @Override

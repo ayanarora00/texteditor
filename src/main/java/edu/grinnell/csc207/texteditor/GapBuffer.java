@@ -39,11 +39,11 @@ public class GapBuffer {
     public void insert(char ch) {
 
         // If there is no gap left i.e. end - start == 0 or end == start, we first need to 
-        // expand the buffer. That is done through creating a new array with double the size and then
-        // copying over the elements (the gap increases). Then, the original buffer is reassigned to 
-        // new array
+        // expand the buffer. That is done through creating a new array with double the size 
+        // and then copying over the elements (the gap increases).
+        // Then, the original buffer is reassigned to new array
 
-        if (this.end == this.start){
+        if (this.end == this.start) {
 
             // Copying content of old array to new one, with the new array having double the length
             char[] newArray = Arrays.copyOf(this.buffer, this.buffer.length * 2);    
@@ -88,7 +88,8 @@ public class GapBuffer {
 
     public void delete() {
 
-        // Checking if the start is at 0 index or not - 0 index would mean not having any characters to delete
+        // Checking if the start is at 0 index or not - 0 index would mean not
+        //  having any characters to delete
 
         if (this.start > 0) {
             // Decrementing start variable
@@ -113,7 +114,7 @@ public class GapBuffer {
     public void moveLeft() {
 
         // Checking if the cursor can be moved left 
-        if (this.start > 0) {
+        if (this.start > 0 && this.end > 0) {
 
             // Decrementing start value
             this.start--;
@@ -136,7 +137,8 @@ public class GapBuffer {
 
     public void moveRight() {
 
-        // Checking if end variable's value is lesser than the buffer's actual length to confirm we're not standing
+        // Checking if end variable's value is lesser than the buffer's actual length
+        // to confirm we're not standing
         // at the buffer's end (otherwise, we can't move right)
 
         if (this.end < this.buffer.length) {
@@ -187,16 +189,14 @@ public class GapBuffer {
 
     /** 
      * Returns the elements of the buffer as a String
-     * 
-     * @param 
      * @return The String version of the buffer
      */
 
     public String toString() {
 
         // Concatenating the 2 parts (before and after the gap)
-        return (String.valueOf(this.buffer, 0, this.start) +
-                String.valueOf(this.buffer, this.end, buffer.length - this.end));
+        return (String.valueOf(this.buffer, 0, this.start)
+                + String.valueOf(this.buffer, this.end, buffer.length - this.end));
 
     }
 

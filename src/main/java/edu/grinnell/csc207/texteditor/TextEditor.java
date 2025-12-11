@@ -1,13 +1,11 @@
 package edu.grinnell.csc207.texteditor;
 import java.io.IOException;
-import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import com.googlecode.lanterna.TerminalPosition;
 import com.googlecode.lanterna.TextCharacter;
-import com.googlecode.lanterna.gui2.Direction;
 import com.googlecode.lanterna.input.KeyStroke;
 import com.googlecode.lanterna.input.KeyType;
 import com.googlecode.lanterna.screen.Screen;
@@ -24,10 +22,10 @@ public class TextEditor {
     /** 
      * drawBuffer method that draws the buffer/file contents onto the screen
      * 
-     * @param GapBuffer buf - the gapbuffer object we declare and use to implement the text editor
-     * @param Screen screen - the screen we will initialize on which the contents of the file have to be rendered
+     * @param buf the gapbuffer object we declare and use to implement the text editor
+     * @param screen what we initialize on which the contents of the file have to be rendered
      * @throws IOException
-     */
+    */
     
     public static void drawBuffer(GapBuffer buf, Screen screen) throws IOException {
 
@@ -38,7 +36,7 @@ public class TextEditor {
         screen.clear();
 
         //  Rendering the content to the screen. We traverse the buffer and adds the characters to 
-        // the screen
+        //  the screen
         for (int i = 0; i <  buf.getSize(); i++) {
 
             // We make sure i is in the bounds of the screen's length
@@ -116,7 +114,8 @@ public class TextEditor {
         Screen screen = new TerminalScreen(frame);
         screen.startScreen();
 
-        // The running variable is set to true (only the escape key later on will switch it to false and
+        // The running variable is set to true 
+        // (only the escape key later on will switch it to false and
         // we'll exit the loop running the editor)
 
         boolean isRunning = true;
