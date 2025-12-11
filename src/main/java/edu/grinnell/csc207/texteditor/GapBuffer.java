@@ -16,9 +16,6 @@ public class GapBuffer {
 
     /** 
      * Gapbuffer constructor is used to create a new buffer
-     * 
-     * @param nothing
-     * @return doesn't return anythinG
      */
 
     public GapBuffer() {
@@ -36,8 +33,7 @@ public class GapBuffer {
     /** 
      * Insert is used to add a new character to the buffer
      * 
-     * @param char ch to be inserted into the buffer
-     * @return void - doesn't return anything
+     * @param ch the character to insert
      */
 
     public void insert(char ch) {
@@ -88,9 +84,6 @@ public class GapBuffer {
 
     /** 
      * Delete function deletes the character at the cursor position
-     * 
-     * @param doesn't take parameters
-     * @return void - doesn't return anything
      */
 
     public void delete() {
@@ -106,9 +99,7 @@ public class GapBuffer {
 
     /** 
      * Returns the cursor position (start value in this case)
-     * 
-     * @param doesn't take parameters
-     * @return int - the position/index of the cursor
+     * @return the position/index of the cursor
      */
 
     public int getCursorPosition() {
@@ -117,9 +108,6 @@ public class GapBuffer {
 
     /** 
      * Moves the cursor (start value in this case to the left)
-     * 
-     * @param doesn't take parameters
-     * @return void - doesn't return anything
      */
 
     public void moveLeft() {
@@ -144,9 +132,6 @@ public class GapBuffer {
 
     /** 
      * Moves the cursor (start value in this case to the right)
-     * 
-     * @param doesn't take parameters
-     * @return void - doesn't return anything
      */
 
     public void moveRight() {
@@ -172,9 +157,7 @@ public class GapBuffer {
 
     /**
      * Returns the size of the text (that is the size of both the halves without the gap)
-     * 
-     * @param doesn't take parameters
-     * @return int - the size of the text
+     * @return the integer size of the text
      */
 
     public int getSize() {
@@ -185,8 +168,8 @@ public class GapBuffer {
     /** 
      * Returns the character at the inputted index
      * 
-     * @param int i - the index for which we need to access the character
-     * @return char - the character at index i 
+     * @param i the index for which we need to access the character
+     * @return the character at index i 
      */
 
     public char getChar(int i) {
@@ -205,8 +188,8 @@ public class GapBuffer {
     /** 
      * Returns the elements of the buffer as a String
      * 
-     * @param doesn't take anything as parameter
-     * @return String - the string version of the buffer
+     * @param 
+     * @return The String version of the buffer
      */
 
     public String toString() {
