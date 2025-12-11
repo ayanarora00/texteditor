@@ -25,6 +25,7 @@ public class SimpleStringBufferTests {
         buffer.delete();
         buffer.delete();
         buffer.delete();
+        buffer.delete();
         assertEquals("", buffer.toString());
     }
 

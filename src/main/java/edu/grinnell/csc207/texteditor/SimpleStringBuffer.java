@@ -43,12 +43,16 @@ public class SimpleStringBuffer {
 
     public void delete() {
 
-        // Uses substring function and concatenates the strings before 
-        // and after the element to delete
-        // reassigning it to the string/buffer variable
-        this.str = this.str.substring(0, cursor - 1) + this.str.substring(cursor);
+        if (this.cursor > 0) {
+            
+            // Uses substring function and concatenates the strings before 
+            // and after the element to delete
+            // reassigning it to the string/buffer variable
+            this.str = this.str.substring(0, cursor - 1) + this.str.substring(cursor);
 
-        cursor--;
+            cursor--;
+
+        }
 
     }
 
