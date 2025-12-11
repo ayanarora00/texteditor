@@ -44,11 +44,11 @@ public class SimpleStringBuffer {
 
     public void delete() {
     
-        if (cursor > 1) {
+        if (cursor < this.str.length()) {
 
             // Uses substring function and concatenates the strings before and after the element to delete
             // reassigning it to the string/buffer variable
-            this.str = this.str.substring(0, cursor - 1) + this.str.substring(cursor);
+            this.str = this.str.substring(0, cursor) + this.str.substring(cursor + 1);
 
             // Cursor is decremented
             this.cursor--;
