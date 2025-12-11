@@ -1,5 +1,4 @@
 package edu.grinnell.csc207.texteditor;
-import java.util.Arrays;
 
 /**
  * A naive implementation of a text buffer using a <code>String</code>.
@@ -46,12 +45,10 @@ public class SimpleStringBuffer {
     
         if (cursor < this.str.length()) {
 
-            // Uses substring function and concatenates the strings before and after the element to delete
+            // Uses substring function and concatenates the strings before 
+            // and after the element to delete
             // reassigning it to the string/buffer variable
             this.str = this.str.substring(0, cursor) + this.str.substring(cursor + 1);
-
-            // Cursor is decremented
-            this.cursor--;
 
         }
 
