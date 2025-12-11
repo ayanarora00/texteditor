@@ -45,7 +45,7 @@ public class GapBuffer {
 
         if (this.end == this.start) {
 
-            // Copying content of old array to new one, with the new array having double the length
+            // Copying content of old array to new one, new array having double the length
             char[] newArray = Arrays.copyOf(this.buffer, this.buffer.length * 2);    
 
             // Copying the first (before - gap part)
@@ -54,20 +54,20 @@ public class GapBuffer {
             }
 
             // Variable for second half's length
-            int length_secondhalf = this.buffer.length - this.end;
+            int secondhalfLength = this.buffer.length - this.end;
 
             // Setting new end index
-            int end_updated = newArray.length - length_secondhalf;
+            int updatedEnd = newArray.length - secondhalfLength;
 
             // Copying over the second half (after gap)
-            for (int i = 0; i < length_secondhalf; i++) {
-                newArray[end_updated + i] = this.buffer[this.end + i];
+            for (int i = 0; i < secondhalfLength; i++) {
+                newArray[updatedEnd + i] = this.buffer[this.end + i];
             }
 
             // Reassigning buffer to the new array
             // Updating the end
             this.buffer = newArray;
-            this.end = end_updated;
+            this.end = updatedEnd;
 
         }
 

@@ -37,7 +37,7 @@ public class TextEditor {
 
         //  Rendering the content to the screen. We traverse the buffer and adds the characters to 
         //  the screen
-        for (int i = 0; i <  buf.getSize(); i++) {
+        for (int i = 0; i < buf.getSize(); i++) {
 
             // We make sure i is in the bounds of the screen's length
             if (i < cols) {
